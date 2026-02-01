@@ -28,7 +28,7 @@ MultipleChoiceQuestion::MultipleChoiceQuestion(
 std::string MultipleChoiceQuestion::ask() {
     while (true) {
         std::cout << question;
-        std::cout << "Your anser: ";
+        std::cout << "Your answer: ";
 
         std::string myAnswer;
         std::getline(std::cin, myAnswer);
