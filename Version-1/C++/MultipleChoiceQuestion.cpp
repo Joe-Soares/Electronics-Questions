@@ -27,23 +27,24 @@ MultipleChoiceQuestion::MultipleChoiceQuestion(
 
 std::string MultipleChoiceQuestion::ask() {
     while (true) {
-	std::cout << question;
-	std::cout << "Your anser: ";
+        std::cout << question;
+        std::cout << "Your anser: ";
 
-	std::string myAnswer;
-	std::getline(std::cin, myAnswer);
+        std::string myAnswer;
+        std::getline(std::cin, myAnswer);
 
-	std::transform(myAnswer.begin(),
-		       myAnswer.end(),
-		       myAnswer.begin(),
-		       ::toupper);
+        std::transform(myAnswer.begin(),
+                   myAnswer.end(),
+                   myAnswer.begin(),
+                   ::toupper);
 
-	if (myAnswer == "A" || myAnswer == "B" ||
-	    myAnswer == "C" || myAnswer == "D" ||
-	    myAnswer == "E") {
-	    return myAnswer;
-	} else {
-	    std::cout << "Invalid answer. Please enter A, B, C, D or E.\n";
-	}
+        if (myAnswer == "A" || myAnswer == "B" ||
+            myAnswer == "C" || myAnswer == "D" ||
+            myAnswer == "E") {
+            return myAnswer;
+        } else {
+            std::cout << "Invalid answer. Please enter A, B, C, D or E.\n";
+        }
+    }
 }
  
